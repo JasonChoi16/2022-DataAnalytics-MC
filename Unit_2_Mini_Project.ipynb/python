@@ -1,0 +1,94 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Unit 2 Mini Project.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPY3IWHfPrSeIee4xXmYE9Q",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/JasonChoi16/2022-DataAnalytics-MC/blob/main/Unit_2_Mini_Project.ipynb/python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HQO0y6H39Vkq",
+        "outputId": "53eed9da-5143-4c60-db74-0d6daf1fd767"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 120\n",
+            "You picked an even number.\n",
+            "120 is a multiple of 4\n"
+          ]
+        }
+      ],
+      "source": [
+        "num = int(input(\"Enter a number: \"))\n",
+        "mod = num % 2\n",
+        "if mod > 0:\n",
+        "  print(\"You picked an odd number.\")\n",
+        "else:\n",
+        "  print(\"You picked an even number.\")\n",
+        "if num % 4 == 0:\n",
+        "  print (num, \"is a multiple of 4\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = int(input(\"Enter a number: \"))\n",
+        "check = int(input(\"Enter a number to divide by: \"))\n",
+        "\n",
+        "if num % check == 0:\n",
+        "  print (\"Divides evenly.\")\n",
+        "else:\n",
+        "  print (\"Doesn't divide evenly\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1mt6SYi-sWNm",
+        "outputId": "1370fce8-6727-4a38-a417-3f72f49dabcb"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 12\n",
+            "Enter a number to divide by: 3\n",
+            "Divides evenly.\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
