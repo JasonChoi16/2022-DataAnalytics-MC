@@ -1,1 +1,88 @@
-hi
+DROP TABLE IF EXISTS student;
+CREATE TABLE student
+(
+    id serial PRIMARY KEY,
+    first_name character varying,
+    last_name character varying,
+    email character varying,
+    gender character varying,
+    work_phone character varying,
+    book_preference_hardcopy boolean 
+);
+
+copy student(first_name,last_name,email,gender,work_phone,book_preference_hardcopy)
+--set the path for file location of student_data.csv
+from '/Applications/PostgreSQL 14/student_data.csv'
+delimiter ',' CSV header;
+
+
+  
+DROP TABLE IF EXISTS student_marks;
+CREATE TABLE student_marks
+(
+    id serial PRIMARY KEY,
+    student_reg_id integer,
+    student_id integer,
+	unit2 integer,
+	unit3 integer,
+	unit4 integer,
+	unit5 integer    
+);
+
+copy student_marks(student_reg_id,student_id,unit2,unit3,unit4,unit5)
+--set the path for file location of student_marks.csv
+from '/Applications/PostgreSQL 14/student_marks.csv'
+delimiter ',' CSV header
+
+
+Sample questions: 
+
+-- students with the highest marks in Unit 4
+select student_id from student_marks where unit4 = 100
+-- students scored between 89 and 100 unit4 
+select student_id from student_marks where unit4 > 89 and unit4 <=100
+Open ended questions:
+-- Take a closer look at the tables that you created and come up with 10 different scenarios/ questions and form SQL
+-- Ask your colleagues
+
+-- students who got 85+ in Unit 2
+select student_id from student_marks where unit2 >= 85
+
+-- students who got 85+ in Unit 3
+select student_id from student_marks where unit3 >= 85
+
+-- students who got 85+ in Unit 4
+select student_id from student_marks where unit4 >= 85
+
+-- students who got 85+ in Unit 5
+select student_id from student_marks where unit5 >= 85
+
+-- students who got 85+ in at least 2 units 
+select * from student_marks where (unit2 >= 85 and unit3 >=85) or (unit2 >= 85 and unit4 >=85) or (unit2 >= 85 and unit5 >=85) or (unit3 >= 85 and unit4 >=85) or (unit3 >= 85 and unit5 >=85) or (unit4 >= 85 and unit5 >=85)
+
+-- students who got 85+ in at least 3 units 
+select * from student_marks where (unit2 >= 85 and unit3 >=85 and unit4 >=85) or (unit2 >= 85 and unit3 >=85 and unit5 >=85) or (unit2 >= 85 and unit4 >=85 and unit5 >=85) or (unit3 >= 85 and unit4 >= 85 and unit5 >=85)
+
+--students who got 85+ in all 4 units
+select student_id from student_marks where (unit2 >= 85 and unit3 >= 85 and unit4 >= 85 and unit5 >= 85)
+
+-- students who got 95+ in Unit 2
+select student_id from student_marks where unit2 >= 95
+
+-- students who got 95+ in Unit 3
+select student_id from student_marks where unit3 >= 95
+
+-- students who got 95+ in Unit 4
+select student_id from student_marks where unit4 >= 95
+
+-- students who got 95+ in Unit 5
+select student_id from student_marks where unit5 >= 95
+
+-- students who got 95+ in at least 2 units 
+select student_id from student_marks where (unit2 >= 95 and unit3 >=95) or (unit2 >= 95 and unit4 >=95) or (unit2 >= 95 and unit5 >=95) or (unit3 >= 95 and unit4 >=95) or (unit3 >= 95 and unit5 >=95) or (unit4 >= 95 and unit5 >=95)
+
+-- students who got 95+ in at least 3 units 
+select student_id from student_marks where (unit2 >= 95 and unit3 >=95 and unit4 >=95) or (unit2 >= 95 and unit3 >=95 and unit5 >=95) or (unit2 >= 95 and unit4 >=95 and unit5 >=95) or (unit3 >= 95 and unit4 >= 95 and unit5 >=95)
+
+--students who got 95+ in all 4 units
+select student_id from student_marks where (unit2 >= 95 and unit3 >= 95 and unit4 >= 95 and unit5 >= 95)
