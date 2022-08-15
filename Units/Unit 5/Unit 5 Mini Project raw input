@@ -64,7 +64,7 @@ select * from student_marks where (unit2 >= 85 and unit3 >=85) or (unit2 >= 85 a
 select * from student_marks where (unit2 >= 85 and unit3 >=85 and unit4 >=85) or (unit2 >= 85 and unit3 >=85 and unit5 >=85) or (unit2 >= 85 and unit4 >=85 and unit5 >=85) or (unit3 >= 85 and unit4 >= 85 and unit5 >=85)
 
 --students who got 85+ in all 4 units
-select student_id from student_marks where (unit2 >= 85 and unit3 >= 85 and unit4 >= 85 and unit5 >= 85)
+select * from student_marks where (unit2 >= 85 and unit3 >= 85 and unit4 >= 85 and unit5 >= 85)
 
 -- students who got 95+ in Unit 2
 select student_id from student_marks where unit2 >= 95
@@ -79,10 +79,10 @@ select student_id from student_marks where unit4 >= 95
 select student_id from student_marks where unit5 >= 95
 
 -- students who got 95+ in at least 2 units 
-select student_id from student_marks where (unit2 >= 95 and unit3 >=95) or (unit2 >= 95 and unit4 >=95) or (unit2 >= 95 and unit5 >=95) or (unit3 >= 95 and unit4 >=95) or (unit3 >= 95 and unit5 >=95) or (unit4 >= 95 and unit5 >=95)
+select * from student_marks where (unit2 >= 95 and unit3 >=95) or (unit2 >= 95 and unit4 >=95) or (unit2 >= 95 and unit5 >=95) or (unit3 >= 95 and unit4 >=95) or (unit3 >= 95 and unit5 >=95) or (unit4 >= 95 and unit5 >=95)
 
 -- students who got 95+ in at least 3 units 
-select student_id from student_marks where (unit2 >= 95 and unit3 >=95 and unit4 >=95) or (unit2 >= 95 and unit3 >=95 and unit5 >=95) or (unit2 >= 95 and unit4 >=95 and unit5 >=95) or (unit3 >= 95 and unit4 >= 95 and unit5 >=95)
+select * from student_marks where (unit2 >= 95 and unit3 >=95 and unit4 >=95) or (unit2 >= 95 and unit3 >=95 and unit5 >=95) or (unit2 >= 95 and unit4 >=95 and unit5 >=95) or (unit3 >= 95 and unit4 >= 95 and unit5 >=95)
 
 --students who got 95+ in all 4 units
-select student_id from student_marks where (unit2 >= 95 and unit3 >= 95 and unit4 >= 95 and unit5 >= 95)
+select * from student_marks where (unit2 >= 95 and unit3 >= 95 and unit4 >= 95 and unit5 >= 95)
