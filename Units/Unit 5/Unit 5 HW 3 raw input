@@ -1,0 +1,24 @@
+CREATE TABLE customers (
+Customer_ID int,
+Customer_Name varchar(255),
+Address varchar(255),
+City varchar(255),
+Postal_Code int,
+Country varchar(255),
+Email varchar(255)
+);
+
+INSERT INTO customers (Customer_ID, Customer_Name, Address, City, Postal_Code, Country, Email)
+VALUES (1, 'Eliana_Li', '123 Beauty Street', 'Albertson', 11507, 'USA', 'elianali@gmail.com'),
+       (2, 'Jason Choi', '225 Orchard Park', 'Allendale', 07401, 'USA', 'jasonchoi@gmail.com'),
+       (3, 'Wubby Bear', '150 Fairhaven Drive', 'Jericho', 11753, 'USA', 'wubbybear@gmail.com');
+
+
+update customers 
+SET customer_name = 'Eliana Li'
+Where customer_id = 1;
+
+
+delete from customers where customer_id = 3;
+
+select * from customers
