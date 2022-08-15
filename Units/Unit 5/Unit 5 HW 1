@@ -1,19 +1,1 @@
-Select * from customer;
 
-Select first_name, last_name, email from customer;
-
-Select * from film;
-
-Select distinct release_year from film;
-
-Select distinct rental_rate from film;
-
-Select email from customer where first_name = 'Nancy' and last_name = 'Thomas';
-
-Select phone from address where address = '259 Ipoh Drive';
-
-select * from customer where store_id ='1' and address_id > '150';
-
-select * from payment where amount = '4.99' or amount = '1.99';
-
-select * from payment where amount > 5;
